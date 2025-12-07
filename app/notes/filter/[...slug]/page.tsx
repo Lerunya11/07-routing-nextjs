@@ -12,7 +12,7 @@ import NotesClient from '../../Notes.client';
 
 const PER_PAGE = 12;
 
-// В Next 16 params передаётся как Promise — используем это явно
+
 type RouteParams = {
   slug?: string[];
 };
@@ -22,16 +22,15 @@ type Props = {
 };
 
 export default async function NotesFilterPage({ params }: Props) {
-  // ⬇️ Сначала дожидаемся params, потом читаем slug
+ 
   const { slug } = await params;
 
   // slug = ['all'] | ['Work'] | ['Todo'] | ['Personal'] | ... либо undefined → []
   const slugSegment = slug ?? [];
 
-  // первая часть из URL: 'all', 'Work', 'Todo', 'Personal', ...
   const tagFromUrl = slugSegment[0];
 
-  // если 'all' или пусто → тег НЕ передаём (бек вернёт все заметки)
+  
   const tag: NoteTag | undefined =
     tagFromUrl && tagFromUrl !== 'all' ? (tagFromUrl as NoteTag) : undefined;
 
@@ -39,7 +38,7 @@ export default async function NotesFilterPage({ params }: Props) {
     page: 1,
     perPage: PER_PAGE,
     search: '',
-    tag, // undefined → все заметки; 'Work' | 'Todo' и т.д. → фильтр по тегу
+    tag, 
   };
 
   const queryClient = new QueryClient();
