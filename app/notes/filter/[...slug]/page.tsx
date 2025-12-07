@@ -8,7 +8,7 @@ import {
 
 import { fetchNotes, type FetchNotesParams } from '@/lib/api';
 import type { NoteTag } from '@/types/note';
-import NotesClient from '../../Notes.client';
+import NotesClient from './Notes.client';
 
 const PER_PAGE = 12;
 
@@ -25,7 +25,6 @@ export default async function NotesFilterPage({ params }: Props) {
  
   const { slug } = await params;
 
-  // slug = ['all'] | ['Work'] | ['Todo'] | ['Personal'] | ... либо undefined → []
   const slugSegment = slug ?? [];
 
   const tagFromUrl = slugSegment[0];

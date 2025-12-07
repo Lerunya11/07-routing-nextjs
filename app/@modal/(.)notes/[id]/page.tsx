@@ -1,6 +1,6 @@
 // app/@modal/(.)notes/[id]/page.tsx
 import { fetchNoteById } from '@/lib/api';
-import NotePreviewClient from './NotePreviewClient';
+import NotePreviewClient from './NotePreview.client';
 
 type NotePreviewPageProps = {
   params: Promise<{ id: string }>;

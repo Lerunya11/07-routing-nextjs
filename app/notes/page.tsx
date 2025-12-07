@@ -9,7 +9,7 @@ import {
 import { fetchNotes } from '@/lib/api';
 import type { FetchNotesParams } from '@/lib/api';
 
-import NotesClient from './Notes.client';
+import NotesClient from './filter/[...slug]/Notes.client';
 
 const PER_PAGE = 12;
 

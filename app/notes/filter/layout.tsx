@@ -3,8 +3,8 @@ import type { ReactNode } from 'react';
 import css from './LayoutNotes.module.css';
 
 type NotesFilterLayoutProps = {
-  children: ReactNode;  // область со списком заметок
-  sidebar: ReactNode;   // слот для параллельного маршрута @sidebar
+  children: ReactNode;  
+  sidebar: ReactNode;   
 };
 
 const NotesFilterLayout = ({ children, sidebar }: NotesFilterLayoutProps) => {

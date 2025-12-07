@@ -1,8 +1,6 @@
-// app/@modal/(.)notes/[id]/NotePreview.client.tsx
 'use client';
 
 import { useRouter } from 'next/navigation';
-
 import Modal from '@/components/Modal/Modal';
 import type { Note } from '@/types/note';
 
@@ -12,11 +10,10 @@ type NotePreviewClientProps = {
   note: Note;
 };
 
-const NotePreviewClient = ({ note }: NotePreviewClientProps) => {
+export default function NotePreviewClient({ note }: NotePreviewClientProps) {
   const router = useRouter();
 
   const handleClose = () => {
-   
     router.back();
   };
 
@@ -28,6 +25,4 @@ const NotePreviewClient = ({ note }: NotePreviewClientProps) => {
       </section>
     </Modal>
   );
-};
-
-export default NotePreviewClient;
+}
