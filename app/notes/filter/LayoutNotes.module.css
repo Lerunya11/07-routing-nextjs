@@ -1,8 +1,10 @@
-.container {
+
+.layout {
   display: flex;
   flex-direction: row;
   flex: 1;
 }
+
 
 .sidebar {
   width: 250px;
@@ -14,6 +16,7 @@
   border-right: 1px solid #ddd;
 }
 
-.notesWrapper {
+
+.content {
   width: 100%;
 }
